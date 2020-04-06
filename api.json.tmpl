@@ -518,5 +518,16 @@
       }
       #end if
     }
+  #if $varExists('forecast.zambretti')
+  },
+  "forecast": {
+    "zambretti": {
+      "issued":"$forecast.zambretti.issued_ts.format(format_string="%m/%d/%y %H:%M:%S")",
+      "code":"$forecast.zambretti.code",
+      "label":"$forecast.label('Zambretti', $forecast.zambretti.code)"
+    }
   }
+  #else
+  }
+  #end if
 }
