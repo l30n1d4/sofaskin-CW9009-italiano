@@ -27,6 +27,8 @@
       "windGust":"$current.windGust",
       "windGustDir":"$current.windGustDir",
       "rainRate":"$current.rainRate",
+      #set $CBA = int(125 * ($current.outTemp.raw - $current.dewpoint.raw) + $station.altitude.raw)
+      "cloudBase":"$CBA metri",
       #if $day.pm1_0.has_data
       "PM1":"$current.pm1_0",
       #end if
