@@ -284,7 +284,14 @@
 
                 <!-- Radar -->
                 <div class="card">
-                    <iframe src="https://www.rainviewer.com/map.html?loc=44.6647,10.2722,6&oFa=0&oC=0&oU=0&oCS=0&oF=0&oAP=1&rmt=3&c=6&o=75&lm=0&th=0&sm=1&sn=1" width="100%" frameborder="0" style="border:0;height:50vh;" allowfullscreen></iframe>
+                    #if $Extras.has_key('radar_url') and $Extras.has_key('radar_img')
+                    <a href="$Extras.radar_url" target="_blank">
+                        <img id="radar" class="space small" src="$Extras.radar_img" alt="Radar" />
+                    </a>
+                    <h3>
+                        <a id="btn1" class="cpointer" >Radar Italia</a>
+                    </h3>
+                    #end if
                 </div>
                 <!-- Fine Radar -->
 
