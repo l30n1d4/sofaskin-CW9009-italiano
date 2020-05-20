@@ -130,15 +130,15 @@
                         <tr><td>Raffica di Vento</td><td>$current.windGust </td></tr>
                         <tr><td>Pioggia</td><td>$current.rainRate</td></tr>
 <!--
-                        #if $day.extraTemp1.has_data
-                        <tr><td>Particolato PM 1</td><td>$current.extraTemp1</td></tr>
+                        #if $day.pm1_0.has_data
+                        <tr><td>Particolato PM 1</td><td>$current.pm1_0</td></tr>
                         #end if
 -->
-                        #if $day.extraTemp2.has_data
-                        <tr><td>Particolato PM 2.5</td><td>$current.extraTemp2</td></tr>
+                        #if $day.pm2_5.has_data
+                        <tr><td>Particolato PM 2.5</td><td>$current.pm2_5</td></tr>
                         #end if
-                        #if $day.extraTemp3.has_data
-                        <tr><td>Particolato PM 10</td><td>$current.extraTemp3</td></tr>
+                        #if $day.pm10_0.has_data
+                        <tr><td>Particolato PM 10</td><td>$current.pm10_0</td></tr>
                         #end if
                         #if $day.UV.has_data
                         <tr><td>UV</td><td>$current.UV</td></tr>
@@ -199,18 +199,18 @@
                         <tr><td>Velocit&agrave; Vento Vettoriale</td><td>$day.wind.vecavg</td><td></td></tr>
                         <tr><td>Direzione Vento Vettoriale</td><td>$day.wind.vecdir</td><td></td></tr>
 <!--
-                        #if $day.extraTemp1.has_data
-                        <tr><td>Particolato PM 1 Max</td><td>$day.extraTemp1.max</td><td>$day.extraTemp1.maxtime</td></tr>
-                        <tr><td>Particolato PM 1 Min</td><td>$day.extraTemp1.min</td><td>$day.extraTemp1.mintime</td></tr>
+                        #if $day.pm1_0.has_data
+                        <tr><td>Particolato PM 1 Max</td><td>$day.pm1_0.max</td><td>$day.pm1_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$day.pm1_0.min</td><td>$day.pm1_0.mintime</td></tr>
                         #end if
 -->
-                        #if $day.extraTemp2.has_data
-                        <tr><td>Particolato PM 2.5 Max</td><td>$day.extraTemp2.max</td><td>$day.extraTemp2.maxtime</td></tr>
-                        <tr><td>Particolato PM 2.5 Min</td><td>$day.extraTemp2.min</td><td>$day.extraTemp2.mintime</td></tr>
+                        #if $day.pm2_5.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$day.pm2_5.max</td><td>$day.pm2_5.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Min</td><td>$day.pm2_5.min</td><td>$day.pm2_5.mintime</td></tr>
                         #end if
-                        #if $day.extraTemp3.has_data
-                        <tr><td>Particolato PM 10 Max</td><td>$day.extraTemp3.max</td><td>$day.extraTemp3.maxtime</td></tr>
-                        <tr><td>Particolato PM 10 Min</td><td>$day.extraTemp3.min</td><td>$day.extraTemp3.mintime</td></tr>
+                        #if $day.pm10_0.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$day.pm10_0.max</td><td>$day.pm10_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Min</td><td>$day.pm10_0.min</td><td>$day.pm10_0.mintime</td></tr>
                         #end if
                         #if $day.UV.has_data
                         <tr><td>High UV</td><td>$day.UV.max</td><td>$day.UV.maxtime</td></tr>
@@ -254,18 +254,18 @@
                         <tr><td>Velocit&agrave; Vento Vettoriale</td><td>$yesterday.wind.vecavg</td><td></td></tr>
                         <tr><td>Direzione Vento Vettoriale</td><td>$yesterday.wind.vecdir</td><td></td></tr>
 <!--
-                        #if $yesterday.extraTemp1.has_data
-                        <tr><td>Particolato PM 1 Max</td><td>$yesterday.extraTemp1.max</td><td>$yesterday.extraTemp1.maxtime</td></tr>
-                        <tr><td>Particolato PM 1 Min</td><td>$yesterday.extraTemp1.min</td><td>$yesterday.extraTemp1.mintime</td></tr>
+                        #if $yesterday.pm1_0.has_data
+                        <tr><td>Particolato PM 1 Max</td><td>$yesterday.pm1_0.max</td><td>$yesterday.pm1_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$yesterday.pm1_0.min</td><td>$yesterday.pm1_0.mintime</td></tr>
                         #end if
 -->
-                        #if $yesterday.extraTemp2.has_data
-                        <tr><td>Particolato PM 2.5 Max</td><td>$yesterday.extraTemp2.max</td><td>$yesterday.extraTemp2.maxtime</td></tr>
-                        <tr><td>Particolato PM 2.5 Min</td><td>$yesterday.extraTemp2.min</td><td>$yesterday.extraTemp2.mintime</td></tr>
+                        #if $yesterday.pm2_5.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$yesterday.pm2_5.max</td><td>$yesterday.pm2_5.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Min</td><td>$yesterday.pm2_5.min</td><td>$yesterday.pm2_5.mintime</td></tr>
                         #end if
-                        #if $yesterday.extraTemp3.has_data
-                        <tr><td>Particolato PM 10 Max</td><td>$yesterday.extraTemp3.max</td><td>$yesterday.extraTemp3.maxtime</td></tr>
-                        <tr><td>Particolato PM 10 Min</td><td>$yesterday.extraTemp3.min</td><td>$yesterday.extraTemp3.mintime</td></tr>
+                        #if $yesterday.pm10_0.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$yesterday.pm10_0.max</td><td>$yesterday.pm10_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Min</td><td>$yesterday.pm10_0.min</td><td>$yesterday.pm10_0.mintime</td></tr>
                         #end if
                         #if $yesterday.UV.has_data
                         <tr><td>High UV</td><td>$yesterday.UV.max</td><td>$yesterday.UV.maxtime</td></tr>
@@ -313,7 +313,7 @@
                     <img src="dayrx.png" alt="day rx percent"/>
                     #end if
 -->
-                    #if $day.extraTemp1.has_data
+                    #if $day.pm1_0.has_data
                     <img src="daypond.png" alt="Pond Temperatures" />
                     #end if
                 </div>

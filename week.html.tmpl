@@ -116,18 +116,18 @@
 <!--
                         <tr><td>High Inside Temperature</td><td>$week.inTemp.max</td><td>$week.inTemp.maxtime</td></tr>
                         <tr><td>Low Inside Temperature</td><td>$week.inTemp.min</td><td>$week.inTemp.mintime</td></tr>
-                        #if $week.extraTemp1.has_data
-                        <tr><td>Particolato PM 1 Max</td><td>$week.extraTemp1.max</td><td>$week.extraTemp1.maxtime</td></tr>
-                        <tr><td>Particolato PM 1 Min</td><td>$week.extraTemp1.min</td><td>$week.extraTemp1.mintime</td></tr>
+                        #if $week.pm1_0.has_data
+                        <tr><td>Particolato PM 1 Max</td><td>$week.pm1_0.max</td><td>$week.pm1_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$week.pm1_0.min</td><td>$week.pm1_0.mintime</td></tr>
                         #end if
 -->
-                        #if $week.extraTemp2.has_data
-                        <tr><td>Particolato PM 2.5 Max</td><td>$week.extraTemp2.max</td><td>$week.extraTemp2.maxtime</td></tr>
-                        <tr><td>Particolato PM 2.5 Min</td><td>$week.extraTemp2.min</td><td>$week.extraTemp2.mintime</td></tr>
+                        #if $week.pm2_5.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$week.pm2_5.max</td><td>$week.pm2_5.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Min</td><td>$week.pm2_5.min</td><td>$week.pm2_5.mintime</td></tr>
                         #end if
-                        #if $week.extraTemp3.has_data
-                        <tr><td>Particolato PM 10 Max</td><td>$week.extraTemp3.max</td><td>$week.extraTemp3.maxtime</td></tr>
-                        <tr><td>Particolato PM 10 Min</td><td>$week.extraTemp3.min</td><td>$week.extraTemp3.mintime</td></tr>
+                        #if $week.pm10_0.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$week.pm10_0.max</td><td>$week.pm10_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Min</td><td>$week.pm10_0.min</td><td>$week.pm10_0.mintime</td></tr>
                         #end if
                         #if $week.UV.has_data
                         <tr><td>High UV</td><td>$week.UV.max</td><td>$week.UV.maxtime</td></tr>
@@ -167,18 +167,18 @@
 <!--
                         <tr><td>High Inside Temperature</td><td>$week($weeks_ago=1).inTemp.max</td><td>$week($weeks_ago=1).inTemp.maxtime</td></tr>
                         <tr><td>Low Inside Temperature</td><td>$week($weeks_ago=1).inTemp.min</td><td>$week($weeks_ago=1).inTemp.mintime</td></tr>
-                        #if $week($weeks_ago=1).extraTemp1.has_data
-                        <tr><td>Particolato PM 1 Max</td><td>$week($weeks_ago=1).extraTemp1.max</td><td>$week($weeks_ago=1).extraTemp1.maxtime</td></tr>
-                        <tr><td>Particolato PM 1 Min</td><td>$week($weeks_ago=1).extraTemp1.min</td><td>$week($weeks_ago=1).extraTemp1.mintime</td></tr>
+                        #if $week($weeks_ago=1).pm1_0.has_data
+                        <tr><td>Particolato PM 1 Max</td><td>$week($weeks_ago=1).pm1_0.max</td><td>$week($weeks_ago=1).pm1_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$week($weeks_ago=1).pm1_0.min</td><td>$week($weeks_ago=1).pm1_0.mintime</td></tr>
                         #end if
 -->
-                        #if $week($weeks_ago=1).extraTemp2.has_data
-                        <tr><td>Particolato PM 2.5 Max</td><td>$week($weeks_ago=1).extraTemp2.max</td><td>$week($weeks_ago=1).extraTemp2.maxtime</td></tr>
-                        <tr><td>Particolato PM 2.5 Min</td><td>$week($weeks_ago=1).extraTemp2.min</td><td>$week($weeks_ago=1).extraTemp2.mintime</td></tr>
+                        #if $week($weeks_ago=1).pm2_5.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$week($weeks_ago=1).pm2_5.max</td><td>$week($weeks_ago=1).pm2_5.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Min</td><td>$week($weeks_ago=1).pm2_5.min</td><td>$week($weeks_ago=1).pm2_5.mintime</td></tr>
                         #end if
-                        #if $week($weeks_ago=1).extraTemp3.has_data
-                        <tr><td>Particolato PM 10 Max</td><td>$week($weeks_ago=1).extraTemp3.max</td><td>$week($weeks_ago=1).extraTemp3.maxtime</td></tr>
-                        <tr><td>Particolato PM 10 Min</td><td>$week($weeks_ago=1).extraTemp3.min</td><td>$week($weeks_ago=1).extraTemp3.mintime</td></tr>
+                        #if $week($weeks_ago=1).pm10_0.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$week($weeks_ago=1).pm10_0.max</td><td>$week($weeks_ago=1).pm10_0.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Min</td><td>$week($weeks_ago=1).pm10_0.min</td><td>$week($weeks_ago=1).pm10_0.mintime</td></tr>
                         #end if
                         #if $week($weeks_ago=1).UV.has_data
                         <tr><td>High UV</td><td>$week($weeks_ago=1).UV.max</td><td>$week($weeks_ago=1).UV.maxtime</td></tr>
@@ -225,7 +225,7 @@
                     <img src="weekrx.png" alt="week rx percent"/>
                     #end if
 -->
-                    #if $week.extraTemp1.has_data
+                    #if $week.pm1_0.has_data
                     <img src="weekpond.png" alt="Pond Temperatures" />
                     #end if
                 </div>
