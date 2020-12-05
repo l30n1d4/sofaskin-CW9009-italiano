@@ -17,7 +17,6 @@
       "heatIndex":"$current.heatindex",
       "dewpoint":"$current.dewpoint",
       "humidity":"$current.outHumidity",
-      "insideHumidity":"$current.inHumidity",
       "barometer":"$current.barometer",
       "barometerTrendDelta":"$trend.time_delta.hour.format("%.0f")",
       "barometerTrendData":"$trend.barometer",
@@ -47,7 +46,8 @@
       #if $day.radiation.has_data
       "solarRadiation":"$current.radiation",
       #end if
-      "insideTemp":"$current.inTemp"
+      "insideTemp":"$current.inTemp",
+      "insideHumidity":"$current.inHumidity"
     },
     "sinceMidnight": {
       "tempMaxValue":"$day.outTemp.max",
