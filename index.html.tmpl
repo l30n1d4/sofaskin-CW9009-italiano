@@ -149,7 +149,7 @@
                         #if $day.radiation.has_data
                         <tr><td>Solar Radiation</td><td>$current.radiation</td></tr>
                         #end if
-                        #set $CBA = int(125 * ($current.outTemp.raw - $current.dewpoint.raw) + 650)
+                        #set $CBA = int(125 * ($current.outTemp.raw - $current.dewpoint.raw) + $station.altitude.raw)
                         <tr><td>Altezza Base Cumuli</td><td>$CBA m</td></tr>
                     </table>
                 </div>
