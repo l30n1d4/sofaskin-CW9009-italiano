@@ -35,18 +35,17 @@
         <script src="js/checkdiff.js"></script>
         <script type="text/javascript">
             function loadMe() {
-                var gpsStation = "$station.latitude[0]" + "." + "$station.latitude[1]".replace(".","") + "00, " + "$station.longitude[0]" + "." + "$station.longitude[1]".replace(".","") + "00";
-                document.getElementById("spaghetti").src = spaghetti(gpsStation);
+                var lat = ConvertDMSToDD(parseFloat('$station.latitude[0]'), parseFloat('$station.latitude[1]'), 0, '$station.latitude[2]');
+                var lon = ConvertDMSToDD(parseFloat('$station.longitude[0]'), parseFloat('$station.longitude[1]'), 0, '$station.longitude[2]');
+                document.getElementById("spaghetti").src = 'https://modeles16.meteociel.fr/modeles/gensp/graphe_ens3.php?ext=1&lat=' + lat + '&lon=' + lon;
             }
-
-            function spaghetti(crd) {
-                var gps = crd.substring(crd.indexOf(",") + 1).trim() + "_" + crd.substring(0, crd.indexOf(","));
-                var d = new Date();
-                var time = d.getFullYear(); //anno yyyy
-                    time += (d.getMonth().toString().length == 1 ? "0" + d.getMonth().toString() : d.getMonth().toString()); // mese MM
-                    time += (d.getDate().toString().length == 1 ? "0" + d.getDate().toString() : d.getDate().toString()); // giorno gg
-                link = "https://modeles7.meteociel.fr/modeles/gens/runs/" + time + "00/graphe3_1000___" + gps + "_.gif";
-                return link;
+            
+            function ConvertDMSToDD(degrees, minutes, seconds, direction) {
+                var dd = degrees + minutes/60 + seconds/(60*60);
+                if (direction == "S" || direction == "W") {
+                    dd *= -1;
+                } // Don't do anything for N or E
+                return dd;
             }
         </script>
     </head>
